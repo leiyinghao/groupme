@@ -5,13 +5,15 @@ class GroupsController < ApplicationController
 
   def show
     #@group = Group.find(params[:id])
-    @group = Group.params[:id]
+    @group = Group.find(params[:id])
     @posts = @group.posts
 
   end
 
   def new
-    @group = Group.new
+    #@group = Group.new
+    @group = Group.find(params[:group_id])
+    @post = @group.posts.build
   end
 
   def create
@@ -25,8 +27,9 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
-
+    #@group = Group.find(params[:id])
+    @group = Group.find(params[:group_id])
+    @post = @group.posts.find(params[:id])
   end
 
 

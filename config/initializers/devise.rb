@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = Setting.email_sender
+  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -92,7 +92,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "07e3e99d660789260b1d34579c1089135c1b9dc8a99ce9a5c8449fbd422ca56b3eafdd3f46dfea34e93d2f3b54431a78f0d8f1493210d8f70739cf44409ec1e3"
+  # config.pepper = "eede0e3641b63a4b5209f1ece8d521cd130cb63153d12edfee71e9e8579e7fb6740a17c2d135c82c65e7b5a61cbd4fdd593d2a1814f073a88102f0e3571642f1"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -223,7 +223,7 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   # ==> OmniAuth
- config.omniauth :facebook, Setting.facebook_app_id, Setting.facebook_secret, :scope => 'email'
+ #config.omniauth :facebook, Setting.facebook_app_id, Setting.facebook_secret, :scope => 'email'
 
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.

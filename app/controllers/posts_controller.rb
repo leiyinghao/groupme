@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :find_group
 
   def create
     @group = Group.find(params[:group_id])
@@ -24,7 +25,13 @@ class PostsController < ApplicationController
   end
 
   private
+    def  find_group
+      @group = Group.find(params[:group_id])
+    end
+
     def post_params
       params.require(:post).permit(:content)
     end
+
+
 end

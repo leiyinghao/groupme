@@ -13,9 +13,9 @@ class GroupsController < ApplicationController
   end
 
   def new
-    #@group = Group.new
-    @group = Group.find(params[:group_id])
-    @post = @group.posts.build
+    @group = Group.new
+    #@group = Group.find(params[:group_id])
+    #@post = @group.posts.build
   end
 
   def create

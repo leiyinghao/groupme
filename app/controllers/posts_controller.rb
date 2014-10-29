@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   before_action :member_required, :only => [:new, :create ]
 
   def create
-    @group = Group.find(params[:group_id])
     @post = @group.posts.new(post_params)
 
     if @post.save
@@ -19,7 +18,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    @group = Group.find(params[:group_id])
     @post = @group.posts.find(params[:id])
 
     if @post.update(post_params)

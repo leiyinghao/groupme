@@ -3,13 +3,10 @@ Groupme::Application.routes.draw do
   #root :to => 'high_voltage/pages#show', :id => 'welcome'
   root :to => "groups#index"
   resources :groups do
-    resources :posts
-    resources :groups do
-      member do
-        post :join
-        post :quit
-      end
-      resources :posts
+    member do
+      post :join
+      post :quit
     end
+    resources :posts
   end
 end

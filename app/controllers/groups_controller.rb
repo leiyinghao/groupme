@@ -33,7 +33,7 @@ class GroupsController < ApplicationController
     #@group = Group.find(params[:id])
     #@group = Group.find(params[:group_id])
     @group = current_user.groups.find(params[:id])
-    @post = @group.posts.find(params[:id])
+    @post = @group.posts
   end
 
 

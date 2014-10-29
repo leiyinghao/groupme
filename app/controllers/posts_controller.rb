@@ -14,6 +14,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def new
+    @post = @group.posts.build
+  end
 
   def update
     @group = Group.find(params[:group_id])
